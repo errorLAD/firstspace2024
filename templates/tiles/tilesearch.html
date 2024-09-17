@@ -1,0 +1,57 @@
+{% extends 'store/layouts/main.html' %}
+
+
+{% block title %} | Search Result {% endblock %}
+{% block content %}
+{% load humanize %}
+<!-- Banner start -->
+
+<!-- Banner end -->
+<!-- Search box 3 start -->
+<!-- Featured car start -->
+<div class="featured-car content-area ">
+    <div class="container">
+        <!-- Main title -->
+      
+        <div class="row">
+          {% for tile in tiles %}
+            <div class="col-lg-4 col-md-6 relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+            
+                <div class="mt-4 px-5 pb-5">
+                    <div class="">
+                        <a href="{% url 'tile_detail' tile.id %}" class="tile-img">
+                       
+                            <img class="d-block w-100" src="{{tile.tile_photo.url}}" alt="tile" style="min-height: 262px; max-height: 262px;">
+                            <div class="facilities-list clearfix">
+                                <ul>
+                                  <a href="#">
+                                    <h5 class="text-2xl tracking-tight text-slate-700"> <a href="{% url 'tile_detail' tile.id %}">{{tile.tile_title}}</a></h5>
+                                  </a>
+                                  <div class=" flex items-center justify-between">
+
+                                    <br>
+                                    <a href="{% url 'tile_detail' tile.id %}">
+                                      <i class="flaticon-pin text-slate-400"></i>{{tile.state}}, {{tile.city}}
+                                  </a>
+                                  </div>
+                                  <p>
+                                    <span class="text-xl font-bold text-slate-900">   <span><i class="flaticon-calendar-1"></i></span>₹{{tile.year}}/month</span>
+                                    
+                                  </p>
+                                </ul>
+                            </div>
+                        </a>
+                        <a href="{% url 'tile_detail' tile.id %}" class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                          
+                          Enquiry Now</a>
+                    </div>
+               
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Featured car end -->
+
+{% endblock %}
