@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-8kir3ie!rtu7s7xq3re=auy)q99cspt_uh!^%dakia0+1e03+g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#CSRF_TRUSTED_ORIGINS = ['24.199.107.32','localhost', '127.0.0.1','https://infablue.in','https://*.infrablue.in']
-ALLOWED_HOSTS = ['*','24.199.107.32','localhost', '127.0.0.1','https://www.infablue.in','https://infablue.in']
+#CSRF_TRUSTED_ORIGINS = ['web-production-d694.up.railway.app','localhost', '127.0.0.1','https://infablue.in','https://*.infrablue.in']
+ALLOWED_HOSTS = ['*','web-production-d694.up.railway.app',localhost', '127.0.0.1','https://www.infablue.in','https://infablue.in']
 
 # Application definition
 
